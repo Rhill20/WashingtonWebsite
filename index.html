@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington State</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>Washington State</h1>
+        <nav>
+            <ul>
+                <li><a href="Olympia.html">Olympia</a></li>
+                <li><a href="Tacoma.html">Tacoma</a></li>
+                <li><a href="Raymond.html">Raymond</a></li>
+                <li><a href="Spokane.html">Spokane</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Washington State</h2>
+            <div class="content">
+                
+                <p>Washington State is known as the "Evergreen State". Washington has a wide variety of nature and urban life. Washington offers many parks and nature reserves, some examples are Mount St. Helens, Snoqualmie Falls, Mount Rainier National Park, Olympic National Park, and many more. Washington
+                   also has a rich urban culture. In Seattle you can visit the space needle, visit the Pike Place Market, or go to Capitol Hill. There are countless cities and nature parks to explore. </p>
+                <p>For more information please visit the official website for Washington. Click <a href="https://wa.gov/" target="_blank">here </a> to be redirected </p>
+            </div>
+        </section>
+        <section class="facts-section">
+            <div class="aside">
+                <h2>Facts about Washington State</h2>
+                <ul>
+                    <li>The population of Washington is 7.71 million</li>
+                    <li> The Capitol of Washington is Olympia. Click <a href="Olympia.html">here</a> to view more about Olympia.</li>
+                    <li>Washington was established in 1889</li>
+                    <li>Washington has over 1,000 historic places, and 17 national natural landmarks </li>
+                    <li>Washington produces more apples than any other state </li>
+                    <li>Seattle was the first city to have police on bicycles </li>
+                    <li>The Lunar Rover that was used on the moon was made in Seattle by Boeing</li>
+                    <li>There is over 35,000 miles of streams and river</li>
+                    <li>There is over 7,000 lakes </li>
+                </ul>
+            </div>
+            <div class="Map">
+                <img src="washingtonmap.png" alt="Washington Map">
+            </div>
+        </section>
+        <section>
+            <h2>Famous Washington Landmarks</h2>
+            <p><i>Hover to view more information</i></p><br>
+            <div class="landmark" id="space-needle">
+                <span class="landmark-name">Space Needle</span>
+                <div class="info">
+                    <p><i>The Space Needle was built in 1962 and stands at 605 Feet tall.</i></p>
+                </div>
+            </div>
+            
+            <div class="landmark" id="mount-rainier">
+                <span class="landmark-name">Mount Rainier</span>
+                <div class="info">
+                    <p><i>Mount Rainier is part of the Cascade Mountain Range.</i></p>
+                </div>
+            </div>
+        </section>
+    <section>
+
+    <table>
+        <h2> Eastern/Western Washington Comparison</h2>
+      <tr>
+        <th>Similarities </th>
+        <th>Eastern Washington</th>
+        <th>Western Washington</th>
+      </tr>
+      <tr>
+        <td>
+            <ol>
+              <li>Friendly People</li>
+              <li>Abundant Nature</li>
+              <li>Many Lakes and Rivers</li>
+            </ol>
+          </td>
+        <td>
+        <ol>
+          <li>Agriculture</li>
+          <li>Hot Summers</li>
+          <li>Cold Snowy Winters</li>
+          <li>Politically Republican</li>
+        </ol>
+      </td>
+      <td>
+        <ol>
+          <li>Beaches</li>
+          <li>Population Size</li>
+          <li>Moderate Climate</li>
+          <li>Politically Democratic </li>
+        </ol>
+      </td>
+      </tr>
+      <tr>
+        <td>Average Temperature</td>
+        <td>48 Degrees Fahrenheit</td>
+        <td>43 Degrees Fahrenheit</td>
+      </tr>
+    </table>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form id="user-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" placeholder="Your First Name" required>
+        
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Your Last Name" required>
+        
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+        
+                <label for="confirm-email">Confirm Email:</label>
+                <input type="email" id="confirm-email" placeholder="Confirm Email" required>
+        
+                <label for="question">Ask a Question:</label>
+                <textarea id="question" placeholder="Your Question"></textarea>
+        
+                <div id="email-error" style="color: red;"></div>
+        
+                <div id="form-error" style="color: red;"></div>
+        
+                <button type="button" onclick="validateForm()">Submit</button>
+            </form>
+        </section>
+        
+        <script>
+            function validateForm() {
+                const firstName = document.getElementById('first-name').value;
+                const lastName = document.getElementById('last-name').value;
+                const email = document.getElementById('email').value;
+                const confirmEmail = document.getElementById('confirm-email').value;
+                const question = document.getElementById('question').value;
+                const emailError = document.getElementById('email-error');
+                const formError = document.getElementById('form-error');
+        
+                // Null Value Checking 
+                if (!firstName || !lastName || !email || !confirmEmail || !question) {
+                    formError.textContent = 'Please fill out the form before submitting.';
+                    return;
+                }
+        
+                
+                if (email !== confirmEmail) {
+                    emailError.textContent = 'Emails do not match!';
+                    formError.textContent = '';
+                } else {
+                    emailError.textContent = '';
+                    formError.textContent = 'Submitted!';
+                    //Currently the submit button just clears form if parameters are met. So a semi functional submit button 
+                    document.getElementById('user-form').reset();
+                }
+            }
+        </script>
+        <section>
+            <h2>Sources</h2>
+            <div class="Sources">
+                <p>
+                    Information obtained from <a href="https://www.legendsofamerica.com/wa-facts/" target="_blank">https://www.legendsofamerica.com/wa-facts/</a>.
+                </p>
+            </div>
+            <h2>Washington Photo Gallery</h2>
+            <div class="Gallary-Cont">
+                <div class="Image-box">
+                    <img src="Gallary2.jpg" alt="Mount Rainier">
+                    <p>Imaged Obtained From https://hometogo.com</p>
+                </div>
+                <div class="Image-box">
+                    <img src="Gallary3.jpg" alt="Olympic National Park">
+                    <p>Imaged Obtained From https://wallup.net</p>
+                </div>
+                <div class="Image-box">
+                    <img src="Gallary4.jpg" alt="Space Needle">
+                    <p>Imaged Obtained From http://www.wallpapergeeks.com</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+         <p>&copy; 2024 Welcome To Washington State</p>
+    </footer>
+</body>
+</html>
